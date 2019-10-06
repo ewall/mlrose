@@ -54,3 +54,8 @@ BibTeX entry:
  note 	= {Accessed: day month year}
 }
 ```
+
+## Customizations
+This custom version includes:
+- a faster MIMIC implementation from David S. Parks (https://github.com/parksd/mlrose)
+- added a counter to track fitness function calls in OptProb

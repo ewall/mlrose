@@ -43,6 +43,7 @@ class OptProb:
         self.population = []
         self.pop_fitness = []
         self.mate_probs = []
+        self.function_calls = 0
 
         if maximize:
             self.maximize = 1.0
@@ -96,6 +97,7 @@ class OptProb:
             raise Exception("state length must match problem length")
 
         fitness = self.maximize*self.fitness_fn.evaluate(state)
+        self.function_calls += 1
 
         return fitness
 
@@ -124,6 +126,16 @@ class OptProb:
             Fitness value of current state vector.
         """
         return self.fitness
+
+    def get_function_calls(self):
+        """ Return the number of times the fitness function has been called since last reset.
+
+        Returns
+        -------
+        self.function_calls: integer
+            Number of times the fitness function has been called since last reset
+        """
+        return self.function_calls
 
     def get_length(self):
         """ Return the state vector length.
@@ -186,6 +198,10 @@ class OptProb:
             Current state vector.
         """
         return self.state
+
+    def reset_function_calls(self):
+        """ Resets the function call counter. """
+        self.function_calls = 0
 
     def set_population(self, new_population):
         """ Change the current population to a specified new population and get
