@@ -1,6 +1,7 @@
 """ MLROSe setup file."""
 
 # Author: Genevieve Hayes
+# Modified: Eric Wallace
 # License: BSD 3 clause
 
 from setuptools import setup
@@ -14,14 +15,14 @@ def readme():
         return _file.read()
 
 
-setup(name='mlrose',
-      version='1.2.0',
+setup(name='mlrose-ewall',
+      version='1.2.0-ewall',
       description="MLROSe: Machine Learning, Randomized Optimization and"
       + " Search",
       long_description=readme(),
       long_description_content_type='text/markdown',
-      url='https://github.com/gkhayes/mlrose',
-      author='Genevieve Hayes',
+      url='https://github.com/ewall/mlrose',
+      author='Genevieve Hayes (modified by Eric Wallace)',
       license='BSD',
       classifiers=[
           "Intended Audience :: Education",

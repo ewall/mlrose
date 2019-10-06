@@ -4,7 +4,7 @@ mlrose is a Python package for applying some of the most common randomized optim
 ## Project Background
 mlrose was initially developed to support students of Georgia Tech's OMSCS/OMSA offering of CS 7641: Machine Learning.
 
-It includes implementations of all randomized optimization algorithms taught in this course, as well as functionality to apply these algorithms to integer-string optimization problems, such as N-Queens and the Knapsack problem; continuous-valued optimization problems, such as the neural network weight problem; and tour optimization problems, such as the Travelling Salesperson problem. It also has the flexibility to solve user-defined optimization problems. 
+It includes implementations of all randomized optimization algorithms taught in this course, as well as functionality to apply these algorithms to integer-string optimization problems, such as N-Queens and the Knapsack problem; continuous-valued optimization problems, such as the neural network weight problem; and tour optimization problems, such as the Travelling Salesperson problem. It also has the flexibility to solve user-defined optimization problems.
 
 At the time of development, there did not exist a single Python package that collected all of this functionality together in the one location.
 
@@ -28,18 +28,18 @@ At the time of development, there did not exist a single Python package that col
 ## Installation
 mlrose was written in Python 3 and requires NumPy, SciPy and Scikit-Learn (sklearn).
 
-The latest released version is available at the [Python package index](https://pypi.org/project/mlrose/) and can be installed using `pip`:
+Eric's customized version is available only on my [GitHub](https://github.com/ewall/mlrose/) and can be installed using `pip`:
 ```
-pip install mlrose
+pip install -e git+git://github.com/ewall/mlrose#egg=mlrose-ewall
 ```
 
 ## Documentation
-The official mlrose documentation can be found [here](https://mlrose.readthedocs.io/). 
+The official mlrose documentation can be found [here](https://mlrose.readthedocs.io/).
 
 A Jupyter notebook containing the examples used in the documentation is also available [here](https://github.com/gkhayes/mlrose/blob/master/tutorial_examples.ipynb).
 
 ## Licensing, Authors, Acknowledgements
-mlrose was written by Genevieve Hayes and is distributed under the [3-Clause BSD license](https://github.com/gkhayes/mlrose/blob/master/LICENSE). 
+mlrose was written by Genevieve Hayes and is distributed under the [3-Clause BSD license](https://github.com/gkhayes/mlrose/blob/master/LICENSE).
 
 You can cite mlrose in research publications and reports as follows:
 * Hayes, G. (2019). ***mlrose: Machine Learning, Randomized Optimization and SEarch package for Python***. https://github.com/gkhayes/mlrose. Accessed: *day month year*.
