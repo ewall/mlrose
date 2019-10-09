@@ -4,6 +4,7 @@
 # License: BSD 3 clause
 
 import numpy as np
+from scipy.special import expit
 
 
 def identity(x, deriv=False):
@@ -74,7 +75,7 @@ def sigmoid(x, deriv=False):
     fx: array
         Value of activation function at x
     """
-    fx = 1/(1 + np.exp(-x))
+    fx = expit(x)  # replacement for 1/(1 + np.exp(-x)), avoids overflow
 
     if deriv:
         fx *= (1 - fx)
